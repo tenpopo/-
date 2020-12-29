@@ -1,0 +1,15 @@
+display dialog "駅名" default button 2 default answer ""
+set tText to result
+set iText to text returned of tText
+set urlText to "https://www.google.com/search?q="
+set urlText2 to "https://www.google.com/maps?q="
+
+tell application "Safari"
+	open location urlText2 & iText & "駅"
+	open location urlText & iText & "駅から渋谷駅まで電車"
+	open location urlText & iText & "駅から東京駅まで電車"
+	open location urlText & iText & "駅から御茶ノ水駅まで電車"
+	open location urlText & iText & "駅から羽田空港まで電車"
+	open location urlText & iText & "駅　治安"
+	open location urlText & iText & "駅　混雑"
+end tell
